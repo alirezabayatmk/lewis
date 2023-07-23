@@ -53,7 +53,7 @@ fairseq-train "$INPUT_PATH/data-bin" \
     --shorten-method "truncate" \
     --find-unused-parameters \
     --update-freq 1 \
-    --save-dir "$OUTPUT_PATH/checkpoints"
+    --save-dir "$OUTPUT_PATH/checkpoints" \
     --tensorboard-logdir "$OUTPUT_PATH/tensorboard" | tee -a "$OUTPUT_PATH/train.log"
 
 

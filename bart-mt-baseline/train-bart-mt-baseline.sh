@@ -15,5 +15,5 @@ fairseq-train $3 --fp16 \
         --seed 222 --log-format simple --log-interval 20 \
 	--restore-file $PRETRAIN \
 	--reset-optimizer --reset-meters --reset-dataloader --reset-lr-scheduler \
-	--save-dir $OUTDIR/checkpoints\
+	--save-dir $OUTDIR/checkpoints \
         --ddp-backend=no_c10d --skip-invalid-size-inputs-valid-test --tensorboard-logdir $OUTDIR/tensorboard  | tee -a $OUTDIR/train.log
